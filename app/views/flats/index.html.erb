@@ -1,0 +1,9 @@
+<h1>Flats</h1>
+<!--Todo : -->
+<!--  Pour chacun des appartements
+Afficher le nom et afficher le prix de l'appartement-->
+<ul>
+  <% @flats.each do |flat| %>
+    <li><%= link_to flat["name"], flat_path(id: flat['id'])%> - <%= flat["price"] %> <%= flat["priceCurrency"] %> </li>
+  <% end %>
+</ul>
