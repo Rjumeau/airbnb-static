@@ -7,4 +7,14 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  # Définir la route pour accéder à la liste d'appartements
+  get 'flats', to: 'flats#index'
+
+  # Définir la route pour accéder au détail d'un appartement
+  get "flats/:id", to: 'flats#show', as: :flat
+
+  # Action dans le controller
+  # Vue associée à l'action
+
 end
